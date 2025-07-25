@@ -221,7 +221,7 @@ body {
     padding: 10px;
     width: 85;
     background-color: #1f1f1f;
-    color: #1ED760;
+    color: white;
     margin: auto;
     min-height: 55vh;
     max-height: 55vh;
@@ -233,11 +233,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: solid #1ED760;
+    border: solid white 1px;
     border-radius: 10px;
     list-style: decimal;
     padding: 10px;
     margin: 10px;
+    cursor: pointer;
 }
 
 .mainContainer .left .songsList li .text {
@@ -343,12 +344,54 @@ body {
     height: 10vh;
     background-color: #121212;
     border-radius: 20px;
+    padding: 0px 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.playBar .content {
+    padding-top: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 20px;
+}
+.playBar .content .songInfo{
+    width: 40%;
+    display: flex;
+    justify-content: flex-start;
+}
+.playBar .content .playButtons{
+    cursor: pointer;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+.playBar .content .songTime{
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .playBar img {
     width: 30px;
+}
+
+.playBar .seekBar {
+    position: absolute;
+    border: 1px solid #1ED760;
+    width: 97%;
+    bottom: 12px;
+    cursor: pointer;
+}
+.playBar .seekBar .circle{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 100%;
+    bottom: -9px;
+    left: 0%;
+    transition: left 0.5s;
 }
