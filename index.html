@@ -4,23 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify Clone</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
         <div class="left-nav">
             <img src="assets/logo.svg" alt="logoIcon">
+            <img src="assets/home.svg" alt="homeIcon">
+            <div class="input">
+                <img src="assets/search.svg" alt="searchIcon">
+                <input type="text" placeholder="What do you want to play?">
+                <img src="assets/browse.svg" alt="browse">
+            </div>
         </div>
         <div class="right-nav">
-
+            <div class="signup">
+                <a href="">Sign up</a>
+            </div>
+            <button>Login</button>
         </div>
     </nav>
     <main>
         <div class="left">
-
+            <div class="top">
+                <div class="title">
+                    Your Library
+                </div>
+                <div class="icons">
+                    <img class="plus" src="assets/plus.svg" alt="plusIcon">
+                    <img class="close" src="assets/close.svg" alt="closeIcon">
+                </div>
+            </div>
+            <div class="songsList">
+                <ul></ul>
+            </div>
+            <div class="bottom"></div>
         </div>
         <div class="right">
             <div class="title">
-
+                Your Playlist
             </div>
             <div class="cards">
 
@@ -30,5 +52,7 @@
             </div>
         </div>
     </main>
+
+    <script src="script.js"></script>
 </body>
 </html>

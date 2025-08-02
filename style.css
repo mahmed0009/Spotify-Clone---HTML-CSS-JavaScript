@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #121212; /* dark background */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #535353; /* grey thumb */
+    border-radius: 10px;
+    border: 2px solid #121212; /* matches track to give padding effect */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #b3b3b3; /* lighter on hover */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html,body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: black;
+    color: white;
+}
+
+nav {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+}
+
+nav .left-nav {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 50%;
+    height: 100%;
+}
+
+nav .left-nav>img {
+    width: 35px;
+    filter: invert(1);
+}
+
+nav .left-nav .input {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    border-radius: 25px;
+    background-color: #1f1f1f;
+    padding: 0px 10px;
+    height: 100%;
+    width: 50%;
+    justify-content: space-between;
+}
+
+nav .left-nav .input input {
+    width: calc(100% - 30px);
+    height: 100%;
+    background: transparent;
+    color: white;
+    border: none;
+    outline: none;
+}
+
+nav .left-nav .input img {
+    width: 25px;
+}
+
+nav .right-nav {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+nav .right-nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav .right-nav button {
+    width: 10%;
+    height: 100%;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* --------------Below CSS for Main ------------------ */
+main{
+    height: calc(100% - 80px);
+    display: flex;
+}
+
+main .left{
+    width: 25%;
+    min-height: 100%;
+    max-height: 100%;
+    border-radius: 25px;
+    margin: 10px;
+    padding: 20px;
+    background-color: #121212;
+}
+main .left .top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+main .left .icons{
+    display: flex;
+    gap: 3px;
+}
+main .left .icons img{
+    width: 20px;
+    filter: invert(1);
+}
+main .left .close{
+    display: none;
+}
+main .left .songsList{
+    border: solid green;
+    min-height: 80%;
+    max-height: 80%;
+    padding: 10px;
+    margin-top: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+main .left .songsList ul{
+    list-style: none;
+}
+
+main .right{
+    width: 75%;
+    min-height: 100%;
+    max-height: 100%;
+    border-radius: 25px;
+    margin: 5px;
+    padding: 20px;
+    background-color: #121212;
+}
