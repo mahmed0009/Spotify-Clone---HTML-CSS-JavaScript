@@ -1,22 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #121212; /* dark background */
+    background: #121212;
+    /* dark background */
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #535353; /* grey thumb */
+    background-color: #535353;
+    /* grey thumb */
     border-radius: 10px;
-    border: 2px solid #121212; /* matches track to give padding effect */
+    border: 2px solid #121212;
+    /* matches track to give padding effect */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #b3b3b3; /* lighter on hover */
+    background-color: #b3b3b3;
+    /* lighter on hover */
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -24,7 +30,8 @@
     font-family: "Poppins", sans-serif;
 }
 
-html,body {
+html,
+body {
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -45,7 +52,6 @@ nav .left-nav {
     display: flex;
     align-items: center;
     gap: 12px;
-    width: 50%;
     height: 100%;
 }
 
@@ -62,7 +68,7 @@ nav .left-nav .input {
     background-color: #1f1f1f;
     padding: 0px 10px;
     height: 100%;
-    width: 50%;
+    width: 300px;
     justify-content: space-between;
 }
 
@@ -80,7 +86,6 @@ nav .left-nav .input img {
 }
 
 nav .right-nav {
-    width: 50%;
     height: 100%;
     display: flex;
     gap: 8px;
@@ -94,20 +99,21 @@ nav .right-nav a {
 }
 
 nav .right-nav button {
-    width: 10%;
+    width: 80px;
     height: 100%;
     border-radius: 50px;
     font-size: 16px;
     font-weight: 700;
+    cursor: pointer;
 }
 
 /* --------------Below CSS for Main ------------------ */
-main{
+main {
     height: calc(100% - 80px);
     display: flex;
 }
 
-main .left{
+main .left {
     width: 25%;
     min-height: 100%;
     max-height: 100%;
@@ -116,36 +122,80 @@ main .left{
     padding: 20px;
     background-color: #121212;
 }
-main .left .top{
+
+main .left .top {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-main .left .icons{
+
+main .left .top .title {
+    font-weight: 600;
+}
+
+main .left .icons {
     display: flex;
     gap: 3px;
 }
-main .left .icons img{
+
+main .left .icons img {
     width: 20px;
     filter: invert(1);
 }
-main .left .close{
+
+main .left .close {
     display: none;
 }
-main .left .songsList{
-    border: solid green;
+
+main .left .songsList {
     min-height: 80%;
     max-height: 80%;
     padding: 10px;
     margin-top: 10px;
     overflow-y: auto;
     overflow-x: hidden;
+    background-color: #1f1f1f;
+    border-radius: 25px;
 }
-main .left .songsList ul{
+
+main .left .songsList ul {
     list-style: none;
 }
 
-main .right{
+main .left .songsList ul li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #535353;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+main .left .songsList ul li .playButt img {
+    width: 40px;
+}
+
+main .left .bottom {
+    min-height: 13%;
+    max-height: 13%;
+    padding: 10px;
+    margin: 10px;
+}
+
+main .left .bottom a {
+    text-decoration: none;
+    color: #939393;
+    font-size: 0.6875rem;
+    font-weight: 400
+}
+
+main .left .bottom a:hover {
+    color: white;
+}
+
+main .right {
     width: 75%;
     min-height: 100%;
     max-height: 100%;
@@ -153,4 +203,211 @@ main .right{
     margin: 5px;
     padding: 20px;
     background-color: #121212;
+}
+
+main .right .hamburger {
+    display: none;
+}
+
+main .right .title {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+main .right .cards {
+    width: 100%;
+    height: 80%;
+    margin: 10px 0px;
+    padding: 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: #1f1f1f;
+    border-radius: 20px;
+}
+
+main .right .cards .card {
+    background-color: #303030;
+    width: 200px;
+    height: 320px;
+    padding: 10px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+main .right .cards .songName {
+    font-weight: 600;
+}
+
+
+main .right .cards .description {
+    font-size: 12px;
+    color: #e2e2e2;
+}
+
+main .right .cards .img {
+    width: 100%;
+}
+
+main .right .cards .img img {
+    width: 100%;
+    border-radius: 20px;
+    object-fit: contain;
+}
+
+main .right .playbar {
+    width: 100%;
+    padding: 15px;
+    background-color: #1f1f1f;
+    border-radius: 20px;
+    position: relative;
+}
+
+main .right .playbar .upperContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .right .playbar .upperContent .playBarSongName {
+    width: 40%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* Ellipsis (...) */
+}
+
+main .right .playbar .upperContent .buttons img {
+    width: 25px;
+    cursor: pointer;
+}
+
+main .right .playbar .upperContent .duration {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+main .right .playbar .seekBar {
+    border: solid #1ed760;
+    margin: 10px 0px;
+    width: 100%;
+}
+
+main .right .playbar .seekBar .circle {
+    position: absolute;
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    bottom: 17px;
+    left: 0%;
+    transition: left ease-in 0.2s;
+}
+
+/* ----------Media query------------ */
+@media (max-width:1010px) {
+    main .left {
+        position: absolute;
+        top: 0px;
+        left: -100%;
+        width: 50%;
+        height: 70%;
+        z-index: 1;
+        transition: left ease-in 0.3s;
+    }
+
+    main .left .songsList {
+        min-height: 70%;
+        max-height: 70%;
+    }
+
+    main .left .close {
+        display: inline;
+    }
+
+    main .right {
+        width: 100%;
+    }
+
+    main .right .hamburger {
+        display: inline;
+    }
+
+    main .right .cards {
+        height: 75%;
+    }
+}
+
+@media (max-width: 600px) {
+    nav .left-nav .input {
+        display: none;
+    }
+
+    main .left {
+        width: 70%;
+    }
+
+    main .right .playbar .upperContent {
+        flex-direction: column;
+    }
+
+    main .right .cards {
+        height: 65%;
+    }
+
+    main .right .cards .card {
+        height: auto;
+    }
+
+
+    main .right .playbar .upperContent .playBarSongName {
+        width: 90%;
+        text-align: center;
+    }
+
+    main .right .playbar .upperContent .duration {
+        justify-content: center;
+        width: 90%;
+    }
+
+}
+
+@media (max-width: 420px) {
+    nav .left-nav>img {
+        width: 28px;
+    }
+
+    nav .right-nav a {
+        font-size: 14px;
+    }
+
+    nav .right-nav button {
+        width: 70px;
+        height: 90%;
+    }
+
+    main .left {
+        width: 80%;
+    }
+
+    main .right .title {
+        font-size: 20px;
+    }
+
+    main .right .hamburger img {
+        width: 20px;
+    }
+
+    main .right .cards .card {
+        width: 400px;
+    }
 }
